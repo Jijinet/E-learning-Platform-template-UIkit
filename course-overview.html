@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>course title</title>
+    <script src="https://cdn.tiny.cloud/1/uupfvcqhkleheq3ho6aygpxrzsttp4ttzoj988u3az0ytr75/tinymce/5/tinymce.min.js"
+        referrerpolicy="origin"></script>
+
+    <!-- ! video editor -->
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css" />
+
+    <!-- ! text editor -->
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+
+    <!-- ! UIKIT CSS -->
+    <link rel="stylesheet" href="css/uikit.min.css" />
+    <link rel="stylesheet" href="custom-css/video-player.css">
+    <link rel="stylesheet" href="custom-css/dashboard.css">
+    <link rel="stylesheet" href="custom-css/global.css">
+
+</head>
+
+<body class="body">
+
+    <!-- ! NAVBAR -->
+
+    <nav class="uk-navbar" uk-navbar>
+        <div class="uk-navbar-left">
+            <ul class="uk-navbar-nav uk-visible@m">
+                <li class="uk-active"> <a class="uk-navbar-item uk-logo logo" href="#"><img src="images/logo.png"
+                            height="80" width="80" alt=""></a></li>
+
+                <li>
+                    <a href="#" class="categories">CATEGORIES</a>
+                    <div class="uk-navbar-dropdown uk-border-rounded uk-margin-xlarge-top">
+                        <ul class="uk-nav uk-navbar-dropdown-nav">
+                            <li class="uk-active"><a href="#">Active</a></li>
+                            <li><a href="#">Item</a></li>
+                            <li><a href="#">Item</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="uk-margin uk-margin-large-left">
+                    <form class="uk-search uk-search-default uk-width-medium uk-child-width-* search-form">
+                        <span uk-search-icon></span>
+                        <input class="uk-search-input uk-border-rounded search-value" type="search"
+                            placeholder="Search">
+                    </form>
+                </li>
+            </ul>
+            <a href="#" class="uk-navbar-toggle uk-hidden@m" uk-navbar-toggle-icon type="button"
+                uk-toggle="target: #offcanvas-overlay"></a>
+            <a class="uk-navbar-item uk-logo uk-hidden@m uk-position-center logo" href="#"><img src="images/logo.png"
+                    height="80" width="80" alt=""></a>
+        </div>
+        <div class="uk-navbar-right ">
+            <ul class="uk-navbar-nav">
+                <li class="uk-margin-small-right uk-visible@m"><a href="#">My Courses</a></li>
+                <li>
+                    <img class="uk-border-circle uk-margin-small-top" width="50" height="50"
+                        src="images/default-picture.png">
+                    <div class="uk-navbar-dropdown uk-border-rounded">
+                        <ul class="uk-nav uk-navbar-dropdown-nav">
+                            <li class="uk-active"><a href="#">Active</a></li>
+                            <li><a href="#">Item</a></li>
+                            <li><a href="#">Item</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ! MOBILE MENU -->
+
+    <div id="offcanvas-overlay" uk-offcanvas="overlay: true">
+        <div class="uk-offcanvas-bar uk-hidden@m uk-background-default">
+
+            <button class="uk-offcanvas-close uk-close-large" type="button" uk-close></button>
+            <ul class="uk-nav uk-nav-default">
+                <li class="uk-active uk-text-large"><a href="#">Menu</a></li>
+
+                <li class="uk-margin">
+                    <form class="uk-search uk-search-default uk-width-medium search-form uk-child-width-*">
+                        <span uk-search-icon></span>
+                        <input class="uk-search-input uk-border-rounded search-value" type="search"
+                            placeholder="Search">
+                    </form>
+                </li>
+
+                <li class="uk-parent dropdown-category">
+                    <p href="#" class="uk-text-bolder">CATEGORIES</p>
+                    <ul class="uk-nav-sub">
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+
+    <!-- ! Video Playlist -->
+
+    <div class="uk-section video-section">
+
+        <div uk-grid>
+            <div class="uk-width-expand@m">
+                <div id="video_player">
+                    <div class="uk-margin-large-left">
+                        <h2>Html And CSS Video Gallery</h2>
+                        <p><span>samantha parker</span> ,<span>web designer</span></p>
+                    </div>
+
+                    <video id="player" poster="" class="video uk-border-rounded uk-width-1-1@m" playsinline controls
+                        data-poster="images/t1.jpg">
+                        <source src="images/overwiew.mp4" type="video/mp4" />
+                        <source src="images/overwiew.mp4" type="video/mp4" />
+
+                    </video>
+
+                    <!-- <video controls poster="" class="video uk-border-rounded uk-width-1-1@m" id="video">
+                        <source src="images/overwiew.mp4" type="video/mp4">
+                        <source src="images/overwiew.mp4" type="video/mp4">
+                    </video> -->
+                </div>
+            </div>
+            <div
+                class="uk-margin-medium-right uk-width-1-4@m uk-margin-large-top uk-margin-large-bottom categorie-list">
+                <h5>30 Lessons (12h 20m)</h5>
+                <div class="uk-panel-scrollable" id="categorie-list">
+                    <ul class="uk-list">
+                        <li class="category-item btn uk-flex uk-flex-between uk-margin-small-top"
+                            href="images/overwiew.mp4"><a class="uk-text-truncate">Lorem, ipsum dolor hokiuj
+                            </a><span class="uk-float-right uk-margin-small-left">4:50</span></li>
+
+                        <li class="category-item btn uk-flex uk-flex-between uk-margin-small-top"
+                            href="images/overwiew.mp4"><a class="uk-text-truncate">Lorem, ipsum dolor
+                                sit amet consectetur
+                                adipisicing elit. Rerum excepturi eum quidem a sunt consectetur reiciendis quis odit
+                                accusamus. Rerum</a><span class="uk-float-right uk-margin-small-left">4:50</span></li>
+
+                        <li class="category-item btn uk-flex uk-flex-between uk-margin-small-top"
+                            href="images/overwiew.mp4"><a class="uk-text-truncate">Lorem, ipsum dolor
+                                sit amet consectetur
+                                adipisicing elit. Rerum excepturi eum quidem a sunt consectetur reiciendis quis odit
+                                accusamus. Rerum</a><span class="uk-float-right uk-margin-small-left">4:50</span></li>
+
+                        <li class="category-item btn uk-flex uk-flex-between uk-margin-small-top"
+                            href="images/overwiew.mp4"><a class="uk-text-truncate">Lorem, ipsum dolor
+                                sit amet consectetur
+                                adipisicing elit. Rerum excepturi eum quidem a sunt consectetur reiciendis quis odit
+                                accusamus. Rerum</a><span class="uk-float-right uk-margin-small-left">4:50</span></li>
+
+                        <li class="category-item btn uk-flex uk-flex-between uk-margin-small-top"
+                            href="images/overwiew.mp4"><a class="uk-text-truncate">Lorem, ipsum dolor
+                                sit amet consectetur
+                                adipisicing elit. Rerum excepturi eum quidem a sunt consectetur reiciendis quis odit
+                                accusamus. Rerum</a><span class="uk-float-right uk-margin-small-left">4:50</span></li>
+
+                        <li class="category-item btn uk-flex uk-flex-between uk-margin-small-top"
+                            href="images/overwiew.mp4"><a class="uk-text-truncate">Lorem, ipsum dolor
+                                sit amet consectetur
+                                adipisicing elit. Rerum excepturi eum quidem a sunt consectetur reiciendis quis odit
+                                accusamus. Rerum</a><span class="uk-float-right uk-margin-small-left">4:50</span></li>
+
+                        <li class="category-item btn uk-flex uk-flex-between uk-margin-small-top"
+                            href="images/overwiew.mp4"><a class="uk-text-truncate">Lorem, ipsum dolor
+                                sit amet consectetur
+                                adipisicing elit. Rerum excepturi eum quidem a sunt consectetur reiciendis quis odit
+                                accusamus. Rerum</a><span class="uk-float-right uk-margin-small-left">4:50</span></li>
+
+                        <li class="category-item btn uk-flex uk-flex-between uk-margin-small-top"
+                            href="images/overwiew.mp4"><a class="uk-text-truncate">Lorem, ipsum dolor
+                                sit amet consectetur
+                                adipisicing elit. Rerum excepturi eum quidem a sunt consectetur reiciendis quis odit
+                                accusamus. Rerum</a><span class="uk-float-right uk-margin-small-left">4:50</span></li>
+
+                        <li class="category-item btn uk-flex uk-flex-between uk-margin-small-top"
+                            href="images/overwiew.mp4"><a class="uk-text-truncate">Lorem, ipsum dolor
+                                sit amet consectetur
+                                adipisicing elit. Rerum excepturi eum quidem a sunt consectetur reiciendis quis odit
+                                accusamus. Rerum</a><span class="uk-float-right uk-margin-small-left">4:50</span></li>
+
+                        <li class="category-item btn uk-flex uk-flex-between uk-margin-small-top"
+                            href="images/overwiew.mp4"><a class="uk-text-truncate">Lorem, ipsum dolor
+                                sit amet consectetur
+                                adipisicing elit. Rerum excepturi eum quidem a sunt consectetur reiciendis quis odit
+                                accusamus. Rerum</a><span class="uk-float-right uk-margin-small-left">4:50</span></li>
+
+                        <li class="category-item btn uk-flex uk-flex-between uk-margin-small-top"
+                            href="images/overwiew.mp4"><a class="uk-text-truncate">Lorem, ipsum dolor
+                                sit amet consectetur
+                                adipisicing elit. Rerum excepturi eum quidem a sunt consectetur reiciendis quis odit
+                                accusamus. Rerum</a><span class="uk-float-right uk-margin-small-left">4:50</span></li>
+
+                        <li class="category-item btn uk-flex uk-flex-between uk-margin-small-top"
+                            href="images/overwiew.mp4"><a class="uk-text-truncate">Lorem, ipsum dolor
+                                sit amet consectetur
+                                adipisicing elit. Rerum excepturi eum quidem a sunt consectetur reiciendis quis odit
+                                accusamus. Rerum</a><span class="uk-float-right uk-margin-small-left">4:50</span></li>
+
+                        <li class="category-item btn uk-flex uk-flex-between uk-margin-small-top"
+                            href="images/overwiew.mp4"><a class="uk-text-truncate">Lorem, ipsum dolor
+                                sit amet consectetur
+                                adipisicing elit. Rerum excepturi eum quidem a sunt consectetur reiciendis quis odit
+                                accusamus. Rerum</a><span class="uk-float-right uk-margin-small-left">4:50</span></li>
+
+                        <li class="category-item btn uk-flex uk-flex-between uk-margin-small-top"
+                            href="images/overwiew.mp4"><a class="uk-text-truncate">Lorem, ipsum dolor
+                                sit amet consectetur
+                                adipisicing elit. Rerum excepturi eum quidem a sunt consectetur reiciendis quis odit
+                                accusamus. Rerum</a><span class="uk-float-right uk-margin-small-left">4:50</span></li>
+
+                        <li class="category-item btn uk-flex uk-flex-between uk-margin-small-top"
+                            href="images/overwiew.mp4"><a class="uk-text-truncate">Lorem, ipsum dolor
+                                sit amet consectetur
+                                adipisicing elit. Rerum excepturi eum quidem a sunt consectetur reiciendis quis odit
+                                accusamus. Rerum</a><span class="uk-float-right uk-margin-small-left">4:50</span></li>
+
+                        <li class="category-item btn uk-flex uk-flex-between uk-margin-small-top"
+                            href="images/overwiew.mp4"><a class="uk-text-truncate">Lorem, ipsum dolor
+                                sit amet consectetur
+                                adipisicing elit. Rerum excepturi eum quidem a sunt consectetur reiciendis quis odit
+                                accusamus. Rerum</a><span class="uk-float-right uk-margin-small-left">4:50</span></li>
+
+                        <li class="category-item btn uk-flex uk-flex-between uk-margin-small-top"
+                            href="images/overwiew.mp4"><a class="uk-text-truncate">Lorem, ipsum dolor
+                                sit amet consectetur
+                                adipisicing elit. Rerum excepturi eum quidem a sunt consectetur reiciendis quis odit
+                                accusamus. Rerum</a><span class="uk-float-right uk-margin-small-left">4:50</span></li>
+
+                        <li class="category-item btn uk-flex uk-flex-between uk-margin-small-top"
+                            href="images/overwiew.mp4"><a class="uk-text-truncate">Lorem, ipsum dolor
+                                sit amet consectetur
+                                adipisicing elit. Rerum excepturi eum quidem a sunt consectetur reiciendis quis odit
+                                accusamus. Rerum</a><span class="uk-float-right uk-margin-small-left">4:50</span></li>
+
+                        <li class="category-item btn uk-flex uk-flex-between uk-margin-small-top"
+                            href="images/overwiew.mp4"><a class="uk-text-truncate">Lorem, ipsum dolor
+                                sit amet consectetur
+                                adipisicing elit. Rerum excepturi eum quidem a sunt consectetur reiciendis quis odit
+                                accusamus. Rerum</a><span class="uk-float-right uk-margin-small-left">4:50</span></li>
+
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+
+
+    <div class="uk-container uk-margin-large-top">
+
+        <div class="uk-text-center" uk-grid>
+
+            <!-- ! reviews -->
+
+            <div class="uk-width-expand@m">
+                <ul class="uk-subnav dashboard-tab uk-subnav-pill uk-margin-medium-bottom" uk-switcher>
+                    <li><a class="uk-border-rounded" href="#">About</a></li>
+                    <li><a class="uk-border-rounded" href="#">Reviews</a></li>
+                </ul>
+
+                <ul class="uk-switcher uk-text-left uk-margin-large-bottom">
+                    <li>
+                        <h2>About this Class</h2>
+                        <hr>
+                        <div class="uk-margin-medium-top">
+                            <article class="uk-article">
+                                <h3>Article title</h3>
+
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                    nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                                    culpa qui officia deserunt mollit anim id est laborum.</p>
+
+
+
+                            </article>
+                        </div>
+                    </li>
+                    <li>
+                        <h2>Course Reviews</h2>
+                        <hr>
+                        <div class="uk-margin-medium-top">
+                            <article class="uk-comment uk-comment-primary uk-margin-medium-top uk-border-rounded">
+                                <header class="uk-comment-header">
+                                    <div class="uk-grid-medium uk-flex-middle" uk-grid>
+                                        <div class="uk-width-auto">
+                                            <img class="uk-comment-avatar uk-border-circle" src="images/t3.jpg"
+                                                width="80" height="80" alt="">
+                                        </div>
+                                        <div class="uk-width-expand">
+                                            <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset"
+                                                    href="#">Author</a></h4>
+                                            <ul
+                                                class="uk-comment-meta uk-subnav review-time uk-subnav-divider uk-margin-remove-top">
+                                                <li>
+                                                    <p href="#">12 days ago</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </header>
+                                <div class="uk-comment-body">
+                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+                                        eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+                                        voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+                                        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+                                        amet.</p>
+                                </div>
+                            </article>
+                            <article class="uk-comment uk-comment-primary uk-margin-medium-top uk-border-rounded">
+                                <header class="uk-comment-header">
+                                    <div class="uk-grid-medium uk-flex-middle" uk-grid>
+                                        <div class="uk-width-auto">
+                                            <img class="uk-comment-avatar uk-border-circle" src="images/t3.jpg"
+                                                width="80" height="80" alt="">
+                                        </div>
+                                        <div class="uk-width-expand">
+                                            <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset"
+                                                    href="#">Author</a></h4>
+                                            <ul
+                                                class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
+                                                <li>
+                                                    <p href="#">12 days ago</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </header>
+                                <div class="uk-comment-body">
+                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+                                        eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+                                        voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+                                        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+                                        amet.</p>
+                                </div>
+                            </article>
+                            <article class="uk-comment uk-comment-primary uk-margin-medium-top uk-border-rounded">
+                                <header class="uk-comment-header">
+                                    <div class="uk-grid-medium uk-flex-middle" uk-grid>
+                                        <div class="uk-width-auto">
+                                            <img class="uk-comment-avatar uk-border-circle" src="images/t3.jpg"
+                                                width="80" height="80" alt="">
+                                        </div>
+                                        <div class="uk-width-expand">
+                                            <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset"
+                                                    href="#">Author</a></h4>
+                                            <ul
+                                                class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
+                                                <li>
+                                                    <p href="#">12 days ago</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </header>
+                                <div class="uk-comment-body">
+                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+                                        eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+                                        voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+                                        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+                                        amet.</p>
+                                </div>
+                            </article>
+                            <article class="uk-comment uk-comment-primary uk-margin-medium-top uk-border-rounded">
+                                <header class="uk-comment-header">
+                                    <div class="uk-grid-medium uk-flex-middle" uk-grid>
+                                        <div class="uk-width-auto">
+                                            <img class="uk-comment-avatar uk-border-circle" src="images/t3.jpg"
+                                                width="80" height="80" alt="">
+                                        </div>
+                                        <div class="uk-width-expand">
+                                            <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset"
+                                                    href="#">Author</a></h4>
+                                            <ul
+                                                class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
+                                                <li>
+                                                    <p href="#">12 days ago</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </header>
+                                <div class="uk-comment-body">
+                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+                                        eirmod tempor invidunt ut labore et dolore magna aliquyam
+                                        amet.</p>
+                                </div>
+                            </article>
+                        </div>
+                    </li>
+
+
+                </ul>
+            </div>
+
+            <!-- ! techer profile -->
+
+            <div class="uk-width-1-3@m">
+                <div class="uk-card uk-width-expand@m teacher-info">
+                    <div class="uk-card-header">
+                        <div class="uk-grid-small uk-flex-middle" uk-grid>
+                            <div class="uk-width-auto">
+                                <img class="uk-border-circle" src="images/t1.jpg">
+                            </div>
+                            <div class="uk-width-expand">
+                                <h4 class="uk-margin-remove-bottom"><a href="">Smantha Parker</a></h4>
+                                <p class="uk-text-meta uk-margin-remove-top">Web Developer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-card-body">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci eos modi vel
+                            exercitationem, aperiam labore quia, quasi voluptate optio impedit esse animi quam
+                            cupiditate rem iusto sequi a. Eligendi asperiores illum architecto autem quae sit culpa
+                            voluptatibus quasi natus doloremque.</p>
+                    </div>
+                    <div class="uk-card-footer">
+                        <a href="#" class="uk-button uk-button-text see-profile uk-text-center">See Profile</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ! related courses -->
+
+    <div class="uk-container uk-margin-large-bottom">
+
+        <div class="uk-grid-small uk-flex-middle" uk-grid>
+            <div class="uk-width-expand">
+
+                <div class="uk-grid-small uk-grid-divider uk-child-width-auto" uk-grid>
+                    <div>
+                        <ul class="uk-subnav uk-subnav-pill" uk-margin>
+                            <li class="uk-active uk-text-large" uk-filter-control>Related Courses</li>
+
+                        </ul>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+        <hr>
+        <ul class="uk-child-width-1-2@s uk-child-width-1-4@m uk-text-center uk-margin-medium-top uk-margin-medium-bottom"
+            uk-grid>
+            <li>
+                <a>
+                    <div class="uk-card uk-card-default uk-box-shadow-hover-small uk-border-rounded">
+                        <div class="uk-card-media-top">
+                            <img class="uk-border-rounded" src="images/t1.jpg" alt="">
+                        </div>
+                        <div
+                            class="uk-card-body uk-padding-remove uk-border-rounded uk-flex uk-flex-between uk-flex-column">
+                            <div class="uk-flex-top">
+                                <div class="uk-flex uk-flex-between">
+                                    <p class="uk-text-light">john wilberg</p><span>6h 18m</span>
+                                </div>
+                                <h5>Lorem ipsum dolor sit amet
+                                    consectetur
+                                    adipisicing elit. Iste, a?lorem ipsum dolorem
+                                </h5>
+                            </div>
+                            <div class="uk-flex uk-flex-between">
+
+                                <span
+                                    class="enroll uk-text-small uk-text-light uk-text-center uk-margin-remove"><strong>40</strong>
+                                    student</span>
+
+
+                                <div>
+                                    <span uk-icon="more" class="uk-text-right"></span>
+                                    <div uk-dropdown="pos: right-bottom"
+                                        class="uk-padding-remove-vertical uk-border-rounded uk-flex-1">
+                                        <ul class="uk-nav uk-dropdown-nav">
+                                            <li
+                                                onclick="UIkit.notification({message: '<span uk-icon=\'icon: check\'></span> Course added to list'})">
+                                                <a>Add to my list</a>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </a>
+            </li>
+
+            <li>
+                <a>
+                    <div class="uk-card uk-card-default uk-box-shadow-hover-small uk-border-rounded">
+                        <div class="uk-card-media-top">
+                            <img class="uk-border-rounded" src="images/t1.jpg" alt="">
+                        </div>
+                        <div
+                            class="uk-card-body uk-padding-remove uk-border-rounded uk-flex uk-flex-between uk-flex-column">
+                            <div class="uk-flex-top">
+                                <div class="uk-flex uk-flex-between">
+                                    <p class="uk-text-light">john wilberg</p><span>6h 18m</span>
+                                </div>
+                                <h5>Lorem ipsum dolor sit amet
+                                    consectetur
+                                    adipisicing elit. Iste, a?lorem ipsum dolorem
+                                </h5>
+                            </div>
+                            <div class="uk-flex uk-flex-between">
+
+                                <span
+                                    class="enroll uk-text-small uk-text-light uk-text-center uk-margin-remove"><strong>40</strong>
+                                    student</span>
+
+
+                                <div>
+                                    <span uk-icon="more" class="uk-text-right"></span>
+                                    <div uk-dropdown="pos: right-bottom"
+                                        class="uk-padding-remove-vertical uk-border-rounded uk-flex-1">
+                                        <ul class="uk-nav uk-dropdown-nav">
+                                            <li
+                                                onclick="UIkit.notification({message: '<span uk-icon=\'icon: check\'></span> Course added to list'})">
+                                                <a>Add to my list</a>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a>
+                    <div class="uk-card uk-card-default uk-box-shadow-hover-small uk-border-rounded">
+                        <div class="uk-card-media-top">
+                            <img class="uk-border-rounded" src="images/t1.jpg" alt="">
+                        </div>
+                        <div
+                            class="uk-card-body uk-padding-remove uk-border-rounded uk-flex uk-flex-between uk-flex-column">
+                            <div class="uk-flex-top">
+                                <div class="uk-flex uk-flex-between">
+                                    <p class="uk-text-light">john wilberg</p><span>6h 18m</span>
+                                </div>
+                                <h5>Lorem ipsum dolor sit amet
+                                    consectetur
+                                    adipisicing elit. Iste, a?lorem ipsum dolorem
+                                </h5>
+                            </div>
+                            <div class="uk-flex uk-flex-between">
+
+                                <span
+                                    class="enroll uk-text-small uk-text-light uk-text-center uk-margin-remove"><strong>40</strong>
+                                    student</span>
+
+
+                                <div>
+                                    <span uk-icon="more" class="uk-text-right"></span>
+                                    <div uk-dropdown="pos: right-bottom"
+                                        class="uk-padding-remove-vertical uk-border-rounded uk-flex-1">
+                                        <ul class="uk-nav uk-dropdown-nav">
+                                            <li
+                                                onclick="UIkit.notification({message: '<span uk-icon=\'icon: check\'></span> Course added to list'})">
+                                                <a>Add to my list</a>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a>
+                    <div class="uk-card uk-card-default uk-box-shadow-hover-small uk-border-rounded">
+                        <div class="uk-card-media-top">
+                            <img class="uk-border-rounded" src="images/t1.jpg" alt="">
+                        </div>
+                        <div
+                            class="uk-card-body uk-padding-remove uk-border-rounded uk-flex uk-flex-between uk-flex-column">
+                            <div class="uk-flex-top">
+                                <div class="uk-flex uk-flex-between">
+                                    <p class="uk-text-light">john wilberg</p><span>6h 18m</span>
+                                </div>
+                                <h5>Lorem ipsum dolor sit amet
+                                    consectetur
+                                    adipisicing elit. Iste, a?lorem ipsum dolorem
+                                </h5>
+                            </div>
+                            <div class="uk-flex uk-flex-between">
+
+                                <span
+                                    class="enroll uk-text-small uk-text-light uk-text-center uk-margin-remove"><strong>40</strong>
+                                    student</span>
+
+
+                                <div>
+                                    <span uk-icon="more" class="uk-text-right"></span>
+                                    <div uk-dropdown="pos: right-bottom"
+                                        class="uk-padding-remove-vertical uk-border-rounded uk-flex-1">
+                                        <ul class="uk-nav uk-dropdown-nav">
+                                            <li
+                                                onclick="UIkit.notification({message: '<span uk-icon=\'icon: check\'></span> Course added to list'})">
+                                                <a>Add to my list</a>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- ! FOOTER -->
+
+    <footer id="page-footer" class="" uk-sticky>
+        <div class="uk-container uk-padding-small">
+            <div class="uk-child-width-expand@s" uk-grid>
+
+                <div>
+                    <h4>CATEGORIES</h4>
+                    <ul class="uk-list">
+                        <a href="">
+                            List item 1
+                        </a>
+                        <a href="">
+                            List item 1
+                        </a>
+                        <a href="">
+                            List item 1
+                        </a>
+                        <a href="">
+                            More...
+                        </a>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>SOCIAL MEDIA</h4>
+                    <ul class="uk-list">
+                        <a uk-icon="icon: facebook" href=""></a>
+                        <a uk-icon="icon: youtube" href=""></a>
+                        <a uk-icon="icon: instagram" href=""></a>
+                        <a uk-icon="icon: github" href=""></a>
+
+                    </ul>
+                </div>
+
+                <div>
+
+                </div>
+                <div>
+
+                </div>
+
+
+                <a class="uk-logo uk-margin-auto-vertical logo" href="#"><img src="/images/logo.png" height="100"
+                        width="100" alt=""></a>
+
+            </div>
+            <p class="uk-text-small uk-text-center">COPYRIGHT © 2021 Dwm Academy.</p>
+        </div>
+    </footer>
+
+    <!-- ! UIKIT JS -->
+    <script src="js/uikit.min.js"></script>
+    <script src="js/uikit-icons.min.js"></script>
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+    <script src="https://cdn.plyr.io/3.6.8/plyr.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="video-player.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

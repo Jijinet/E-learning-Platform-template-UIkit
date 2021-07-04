@@ -1,0 +1,52 @@
+.uk-overlay-default {
+  background: rgba(0, 0, 0, 0.8);
+}
+.uk-overlay-primary {
+  background-color: #0f1a26b4;
+}
+.uk-overlay-primary p {
+  color: white !important;
+}
+.section-teacher {
+  background-color: var(--orange) !important;
+}
+.section-teacher button {
+  background-color: white;
+  color: var(--blue) !important;
+}
+.testmonial-section .uk-card{
+  cursor: auto;
+}
+
+.uk-heading-line > ::after,
+.uk-heading-line > ::before {
+  top: calc(45% - ((0.2px + 0.05em) / 2));
+}
+.white {
+  color: white !important;
+}
+
+.uk-heading-line .uk-card img {
+  height: 80px;
+  width: 80px;
+}
+
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.video-container button {
+  font-weight: 700;
+}
+
+
+:root {
+  /* Fonts */
+  --rubik: "Rubik", sans-serif;
+ --green:#1bb28c;
+  /* Colors */
+  --blue: #0f1a26;
+  --orange: #fc363b;
+}

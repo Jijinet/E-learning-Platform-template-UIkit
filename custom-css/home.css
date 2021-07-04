@@ -1,0 +1,18 @@
+
+
+:root {
+    /* Fonts */
+    --raluay:'Rubik', sans-serif;
+    --rubik: 'Raleway', sans-serif;
+  
+    /* Colors */
+    --blue:#0f1a26;
+    --orange:#fc363b;
+  }
+  .my-courses .uk-card-body{
+   padding: .5rem 1rem !important;
+}
+
+  .my-courses h3{
+     font-size: 1.3rem;
+  }
