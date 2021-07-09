@@ -2,6 +2,9 @@ $( document ).ready(function() {
   
     const editProfile=$('#edit-profile');
     const saveProfile=$('#save-profile');
+    const cancelProfileForm=$('.cancel-profile-form');
+    const cancelCourseForm=$('.cancel-course-form');
+
 
     const addContent=$('#add-content');
     const addContent2=$('#add-content2');
@@ -29,7 +32,7 @@ $( document ).ready(function() {
         addContentContainer.addClass('uk-hidden');
         contentContainer.addClass('uk-hidden');
         contentForm.removeClass('uk-hidden');
-        UIkit.switcher('.dashboard-tab').show(2);  
+        UIkit.switcher('.dashboard-tab').show(1);  
       });
 
       $(addContent2).on('click',()=>{
@@ -41,6 +44,17 @@ $( document ).ready(function() {
       $(addCourse).on('click',()=>{
         contentForm.addClass('uk-hidden');
         contentContainer.removeClass('uk-hidden');
+      });
+
+      
+      $(cancelProfileForm).on('click',()=>{
+        profileForm.addClass('uk-hidden');
+        profileDescription.removeClass('uk-hidden');
+      });
+
+      $(cancelCourseForm).on('click',()=>{
+        contentForm.addClass('uk-hidden');
+        addContentContainer.removeClass('uk-hidden');
       });
 
 
@@ -148,39 +162,56 @@ $( document ).ready(function() {
        $(instructorElement).remove();
 
       }
- 
     });
+    const descriptionContainer=$('.ql-editor');
+    const descriptionValue=$('#description-value');
+
+    $("body").on('DOMSubtreeModified', descriptionContainer, function() {
+      descriptionValue.val(descriptionContainer.html());
+  });
+
+  const reviewContainer=$('');
+  const addReview=$('');
+
+  $(addReview).on('click',()=>{
 
     
+    let image="images/t3.jpg";
+    let inputName="Author";
+    let inputDate="2 DAYS AGO";
+    let inputText=$('#title-content').val();
+
+    
+    reviewContainer.append(`<article class="uk-comment uk-comment-primary uk-margin-medium-top uk-border-rounded">
+    <header class="uk-comment-header">
+        <div class="uk-grid-medium uk-flex-middle" uk-grid>
+            <div class="uk-width-auto">
+                <img class="uk-comment-avatar uk-border-circle" src="${image}"
+                    width="80" height="80" alt="">
+            </div>
+            <div class="uk-width-expand">
+                <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset"
+                        href="student-dashboard.html">Author</a></h4>
+                <ul
+                    class="uk-comment-meta uk-subnav review-time uk-subnav-divider uk-margin-remove-top">
+                    <li>
+                        <p href="#">12 days ago</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="uk-comment-body">
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+            eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+            voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+            clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+            amet.</p>
+    </div>
+</article>`);
 
 
+
+    
   });
  
-
-  function iconClick(e,id){
-
-    const approvedIcon = $('#approved-icon_'+id);
-    const disapprovedIcon = $('#disapproved-icon_'+id);
-
-    const permissionBtn=$('#permission-btn_'+id);
-
-    
-    $(approvedIcon).data('clicked',true);    
-    $(disapprovedIcon).data('clicked',true);
-
-    if($(disapprovedIcon).data('clicked')){
-      permissionBtn.html('Disapproved');
-    
-    }
-
-    else if($(approvedIcon).data('clicked')){
-      permissionBtn.html('Approved');
-    }
-
-
-    $(disapprovedIcon).remove();
-    $(approvedIcon).remove();
-
-  }
-   
-  const player = new Plyr('#player');

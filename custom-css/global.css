@@ -180,6 +180,10 @@ span {
   color: var(--orange) !important;
 
 }
+.profile-img{
+  cursor: pointer;
+}
+
 
 span.username {
   background-color: var(--orange) !important;

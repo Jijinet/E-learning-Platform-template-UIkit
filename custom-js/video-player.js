@@ -16,3 +16,5 @@ function handler(e) {
     video.load();
     video.play();
 }
+
+const player = new Plyr('#player');

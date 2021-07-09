@@ -20,15 +20,15 @@
     <nav class="uk-navbar" uk-navbar>
         <div class="uk-navbar-left uk-width-1-1">
             <ul class="uk-navbar-nav uk-visible@m">
-                <li class="uk-active"> <a class="uk-navbar-item uk-logo logo" href="#"><img src="images/logo.png"
+                <li class="uk-active"><a class="uk-navbar-item uk-logo logo" href="home.html"><img src="images/logo.png"
                             height="80" width="80" alt=""></a></li>
 
                 <li>
-                    <a href="#" class="categories">CATEGORIES</a>
+                    <a href="categorie-page.html" class="categories">CATEGORIES</a>
                     <div class="uk-navbar-dropdown uk-border-rounded uk-margin-xlarge-top">
                         <ul class="uk-nav uk-navbar-dropdown-nav">
-                            <li><a href="#">Web Development</a></li>
-                            <li><a href="#">Web Development</a></li>
+                            <li><a href="categorie-page.html">Web Development</a></li>
+                            <li><a href="categorie-page.html">Mobile Development</a></li>
                         </ul>
                     </div>
                 </li>
@@ -42,18 +42,18 @@
             </ul>
             <a href="#" class="uk-navbar-toggle uk-hidden@m" uk-navbar-toggle-icon type="button"
                 uk-toggle="target: #offcanvas-overlay"></a>
-            <a class="uk-navbar-item uk-logo uk-hidden@m uk-position-center logo" href="#"><img src="images/logo.png"
+            <a class="uk-navbar-item uk-logo uk-hidden@m uk-position-center logo" href="home.html"><img src="images/logo.png"
                     height="80" width="80" alt=""></a>
         </div>
         <div class="uk-navbar-right uk-width-1-6">
             <ul class="uk-navbar-nav">
                 <li class="uk-margin-small-right"><a href="#">My Courses</a></li>
                 <li>
-                    <img class="uk-border-circle uk-margin-small-top" width="50" height="50" src="images/t1.jpg">
+                    <img class="uk-border-circle uk-margin-small-top profile-img" width="50" height="50" src="images/t1.jpg">
                     <div class="uk-navbar-dropdown uk-border-rounded">
                         <ul class="uk-nav uk-navbar-dropdown-nav">
-                            <li><a href="#">My Profile</a></li>
-                            <li><a href="#">Logout</a></li>
+                            <li><a href="teacher-dashboard.html">My Profile</a></li>
+                            <li><a href="index.html">Logout</a></li>
                         </ul>
                     </div>
                 </li>
@@ -81,8 +81,8 @@
                 <li class="uk-parent dropdown-category">
                     <p href="#" class="uk-text-bolder">CATEGORIES</p>
                     <ul class="uk-nav-sub">
-                        <li><a href="#">Web Development</a></li>
-                        <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                        <li><a href="categorie-page.html">Web Development</a></li>
+                        <li><a href="categorie-page.html">Lorem ipsum dolor sit amet.</a></li>
                     </ul>
                 </li>
             </ul>
@@ -111,7 +111,7 @@
 
                             
                                 <div class="uk-card-media-left uk-border-rounded uk-cover-container">
-                                    <a href=""><img src="images/t1.jpg" class="uk-border-rounded" alt="" uk-cover></a>
+                                    <a href="course-overview.html"><img src="images/t1.jpg" class="uk-border-rounded" alt="" uk-cover></a>
                                     <canvas width="400" height="200"></canvas>
                                 </div>
                                 <div class="uk-card-body uk-padding-remove uk-flex uk-flex-column uk-flex-between">
@@ -127,7 +127,7 @@
                                     <div class="uk-flex uk-flex-between">
                                         <p>john wilberg</p><span>6h 18m</span>
                                     </div>
-                                    <a class=""><h5 href="">
+                                    <a class="" href="course-overview.html"><h5>
                                         Lorem ipsum dolor sit
                                             amet
                                             consectetur
@@ -147,7 +147,7 @@
                             uk-grid>
 
                             <div class="uk-card-media-left uk-border-rounded uk-cover-container">
-                                <a href=""><img src="images/t1.jpg" class="uk-border-rounded" alt="" uk-cover></a>
+                                <a href="course-overview.html"><img src="images/t1.jpg" class="uk-border-rounded" alt="" uk-cover></a>
                                 <canvas width="400" height="200"></canvas>
                             </div>
 
@@ -166,7 +166,7 @@
                                 <div class="uk-flex uk-flex-between">
                                     <p>john wilberg</p><span>6h 18m</span>
                                 </div>
-                                <a class=""><h5 href="">
+                                <a class="" href="course-overview.html"><h5 href="">
                                     Lorem ipsum dolor sit
                                         amet
                                         consectetur
@@ -188,7 +188,7 @@
                             uk-grid>
 
                             <div class="uk-card-media-left uk-border-rounded uk-cover-container">
-                                <a href=""><img src="images/t1.jpg" class="uk-border-rounded" alt="" uk-cover></a>
+                                <a href="course-overview.html"><img src="images/t1.jpg" class="uk-border-rounded" alt="" uk-cover></a>
                                 <canvas width="400" height="200"></canvas>
                             </div>
 
@@ -207,7 +207,7 @@
                                 <div class="uk-flex uk-flex-between">
                                     <p>john wilberg</p><span>6h 18m</span>
                                 </div>
-                                <a class=""><h5 href="">
+                                <a class="" href="course-overview.html"><h5 href="">
                                     Lorem ipsum dolor sit
                                         amet
                                         consectetur
@@ -246,9 +246,9 @@
 
             <ul class="uk-flex-center"
                 uk-switcher="animation: uk-animation-slide-left-medium, uk-animation-slide-right-medium" uk-tab>
-                <li><a href="#">Item</a></li>
-                <li><a href="#">Item</a></li>
-                <li><a href="#">Item</a></li>
+                <li><a href="#">Web Development</a></li>
+                <li><a href="#">Mobile Development</a></li>
+                <li><a href="#">Desktop Development</a></li>
             </ul>
 
             <ul class="uk-switcher uk-margin category">
@@ -259,7 +259,7 @@
 
                             <ul class="uk-slider-items uk-child-width-1-3@m uk-child-width-1-2@s uk-grid">
                                 <li>
-                                    <a>
+                                    <a href="course-overview.html">
                                         <div class="uk-card uk-card-default uk-box-shadow-hover-small uk-border-rounded">
                                             <div class="uk-card-media-top">
                                                 <img class="uk-border-rounded" src="images/t1.jpg" alt="">
@@ -297,7 +297,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a>
+                                    <a href="course-overview.html">
                                         <div class="uk-card uk-card-default uk-box-shadow-hover-small uk-border-rounded">
                                             <div class="uk-card-media-top">
                                                 <img class="uk-border-rounded" src="images/t1.jpg" alt="">
@@ -335,7 +335,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a>
+                                    <a href="course-overview.html">
                                         <div class="uk-card uk-card-default uk-box-shadow-hover-small uk-border-rounded">
                                             <div class="uk-card-media-top">
                                                 <img class="uk-border-rounded" src="images/t1.jpg" alt="">
@@ -373,7 +373,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a>
+                                    <a href="course-overview.html">
                                         <div class="uk-card uk-card-default uk-box-shadow-hover-small uk-border-rounded">
                                             <div class="uk-card-media-top">
                                                 <img class="uk-border-rounded" src="images/t1.jpg" alt="">
@@ -411,7 +411,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a>
+                                    <a href="course-overview.html">
                                         <div class="uk-card uk-card-default uk-box-shadow-hover-small uk-border-rounded">
                                             <div class="uk-card-media-top">
                                                 <img class="uk-border-rounded" src="images/t1.jpg" alt="">
@@ -467,7 +467,7 @@
 
                             <ul class="uk-slider-items uk-child-width-1-3@s uk-grid">
                                 <li>
-                                    <a>
+                                    <a href="course-overview.html">
                                         <div class="uk-card uk-card-default uk-box-shadow-hover-small uk-border-rounded">
                                             <div class="uk-card-media-top">
                                                 <img class="uk-border-rounded" src="images/t1.jpg" alt="">
@@ -505,7 +505,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a>
+                                    <a href="course-overview.html">
                                         <div class="uk-card uk-card-default uk-box-shadow-hover-small uk-border-rounded">
                                             <div class="uk-card-media-top">
                                                 <img class="uk-border-rounded" src="images/t1.jpg" alt="">
@@ -543,7 +543,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a>
+                                    <a href="course-overview.html">
                                         <div class="uk-card uk-card-default uk-box-shadow-hover-small uk-border-rounded">
                                             <div class="uk-card-media-top">
                                                 <img class="uk-border-rounded" src="images/t1.jpg" alt="">
@@ -581,7 +581,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a>
+                                    <a href="course-overview.html">
                                         <div class="uk-card uk-card-default uk-box-shadow-hover-small uk-border-rounded">
                                             <div class="uk-card-media-top">
                                                 <img class="uk-border-rounded" src="images/t1.jpg" alt="">
@@ -619,7 +619,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a>
+                                    <a href="course-overview.html">
                                         <div class="uk-card uk-card-default uk-box-shadow-hover-small uk-border-rounded">
                                             <div class="uk-card-media-top">
                                                 <img class="uk-border-rounded" src="images/t1.jpg" alt="">
@@ -657,7 +657,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a>
+                                    <a href="course-overview.html">
                                         <div class="uk-card uk-card-default uk-box-shadow-hover-small uk-border-rounded">
                                             <div class="uk-card-media-top">
                                                 <img class="uk-border-rounded" src="images/t1.jpg" alt="">
@@ -981,7 +981,7 @@
                                 <p>john wilberg</p><span>6h 18m</span>
                             </div>
                             <div class="uk-flex uk-flex-between">
-                                <button class="uk-button uk-button-default uk-border-rounded">Enroll now</button>
+                                <button class="uk-button uk-button-default uk-border-rounded"><a href="course-overview.html">Enroll now</a></button>
                                 <span class="enroll uk-text-small uk-text-light uk-text-center uk-margin-remove"><strong>40</strong> student</span>
                             </div>
 
@@ -1003,7 +1003,7 @@
                                 <p>john wilberg</p><span>6h 18m</span>
                             </div>
                             <div class="uk-flex uk-flex-between">
-                                <button class="uk-button uk-button-default uk-border-rounded">Enroll now</button>
+                                <button class="uk-button uk-button-default uk-border-rounded"><a href="course-overview.html">Enroll now</a></button>
                                 <span class="enroll uk-text-small uk-text-light uk-text-center uk-margin-remove"><strong>40</strong> student</span>
                             </div>
 
@@ -1025,7 +1025,7 @@
                                 <p>john wilberg</p><span>6h 18m</span>
                             </div>
                             <div class="uk-flex uk-flex-between">
-                                <button class="uk-button uk-button-default uk-border-rounded">Enroll now</button>
+                                <button class="uk-button uk-button-default uk-border-rounded"><a href="course-overview.html">Enroll now</a></button>
                                 <span class="enroll uk-text-small uk-text-light uk-text-center uk-margin-remove"><strong>40</strong> student</span>
                             </div>
 
@@ -1255,16 +1255,16 @@
                 <div>
                     <h4>CATEGORIES</h4>
                     <ul class="uk-list">
-                        <a href="">
-                            List item 1
+                        <a href="categorie-page.html">
+                            Web Development
                         </a>
-                        <a href="">
-                            List item 1
+                        <a href="categorie-page.html">
+                            Mobile Development
                         </a>
-                        <a href="">
-                            List item 1
+                        <a href="categorie-page.html">
+                            Desktop Development
                         </a>
-                        <a href="">
+                        <a href="categorie-page.html">
                             More...
                         </a>
                     </ul>
@@ -1273,10 +1273,11 @@
                 <div>
                     <h4>SOCIAL MEDIA</h4>
                     <ul class="uk-list">
-                        <a uk-icon="icon: facebook" href=""></a>
-                        <a uk-icon="icon: youtube" href=""></a>
-                        <a uk-icon="icon: instagram" href=""></a>
-                        <a uk-icon="icon: github" href=""></a>
+
+                        <a uk-icon="icon: facebook" href="https://www.facebook.com" target="_blank"></a>
+                        <a uk-icon="icon: youtube" href="https://www.youtube.com" target="_blank"></a>
+                        <a uk-icon="icon: instagram" href="https://www.instagram.com" target="_blank"></a>
+                        <a uk-icon="icon: github" href="https://www.github.com" target="_blank"></a>
 
                     </ul>
                 </div>
