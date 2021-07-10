@@ -170,15 +170,14 @@ $( document ).ready(function() {
       descriptionValue.val(descriptionContainer.html());
   });
 
-  const reviewContainer=$('');
-  const addReview=$('');
+  const reviewContainer=$('#review-container');
+  const addReview=$('#add-review');
 
   $(addReview).on('click',()=>{
 
     
-    let image="images/t3.jpg";
-    let inputName="Author";
-    let inputDate="2 DAYS AGO";
+    let image="images/default-picture.png";
+    let inputDate="just now"
     let inputText=$('#title-content').val();
 
     
@@ -195,23 +194,18 @@ $( document ).ready(function() {
                 <ul
                     class="uk-comment-meta uk-subnav review-time uk-subnav-divider uk-margin-remove-top">
                     <li>
-                        <p href="#">12 days ago</p>
+                        <p href="#">${inputDate}</p>
                     </li>
                 </ul>
             </div>
         </div>
     </header>
     <div class="uk-comment-body">
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-            eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-            voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-            clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-            amet.</p>
+        <p>${inputText}</p>
     </div>
 </article>`);
 
-
-
     
-  });
- 
+ });
+
+})

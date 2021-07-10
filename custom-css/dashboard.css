@@ -115,6 +115,11 @@
   margin: 20px;
 }
 
+.plyr--video {
+
+  margin-left: 40px;
+}
+
 :root {
   /* Fonts */
   --rubik: "Rubik", sans-serif;
