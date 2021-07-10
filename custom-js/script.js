@@ -81,7 +81,7 @@ $( document ).ready(function() {
         <td>${inputTitle}</td>
         <td>${inputUrl}</td>
         <td>${inputDuration}</td>
-        <td><a uk-icon="icon: trash;" id="remove-content"
+        <td><a uk-icon="icon: trash; ratio: 2" id="remove-content"
                 class="uk-text-danger uk-align-right"></a></td>
     </tr>`);
 // todo
@@ -190,7 +190,7 @@ $( document ).ready(function() {
             </div>
             <div class="uk-width-expand">
                 <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset"
-                        href="student-dashboard.html">Author</a></h4>
+                        href="student-page.html">Author</a></h4>
                 <ul
                     class="uk-comment-meta uk-subnav review-time uk-subnav-divider uk-margin-remove-top">
                     <li>
@@ -205,6 +205,7 @@ $( document ).ready(function() {
     </div>
 </article>`);
 
+$('#title-content').val('');
     
  });
 
